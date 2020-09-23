@@ -1,0 +1,12 @@
+requirements: [
+copper/60
+lead/140
+]
+consumes: {
+  power: 1.2
+  items: {
+    items: [
+    silicon/6
+    ]
+  }
+}
