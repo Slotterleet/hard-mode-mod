@@ -1,0 +1,8 @@
+consumes: {
+  power: 0.5
+  items: {
+    items: [
+    coal/30
+    ]
+  }
+}

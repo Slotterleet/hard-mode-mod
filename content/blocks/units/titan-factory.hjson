@@ -1,0 +1,8 @@
+consumes: {
+  power: 0.6
+  items: {
+    items: [
+    silicon/36
+    ]
+  }
+}

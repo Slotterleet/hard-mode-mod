@@ -1,0 +1,9 @@
+consumes: {
+  power: 3
+  items: {
+    items: [
+    silicon/120
+    titanium/90
+    ]
+  }
+}
