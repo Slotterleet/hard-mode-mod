@@ -6,6 +6,7 @@ This mod makes campaign and the whole Mindustry gameplay harder. If you are a no
 - Unit factories now require triple resources to build units
 - Draug factories cost double copper and lead and require 6 silicon to make the miners
 - Power generators generate 2/3 of the basic generated amount (doesn't affect solar panels)
+- Arc & Lancer require more power to shoot
 ### Units
 - _All_ units have double health
 ## Current version: 1.0
