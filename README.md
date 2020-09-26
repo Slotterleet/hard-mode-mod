@@ -1,5 +1,5 @@
 # Hard Mode for Mindustry
-This mod makes campaign and the whole Mindustry gameplay harder. If you are a novice, don't download this mod.
+Makes campaign and the whole Mindustry gameplay harder. If you are a novice, don't download this mod.
 ## What's Changed
 ### Blocks
 - Turrets and mech pads are twice as expensive as the normal cost
