@@ -1,8 +1,9 @@
 consumes: {
-  power: 0.5
+  power: 3
   items: {
     items: [
-    silicon/18
+    silicon/120
+    graphite/120
     ]
   }
 }

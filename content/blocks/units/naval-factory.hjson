@@ -1,0 +1,10 @@
+plans: [
+  {
+    unit: risso
+    requirements: [
+      silicon/60
+      metaglass/105
+    ]
+    time: 2700
+  }
+]

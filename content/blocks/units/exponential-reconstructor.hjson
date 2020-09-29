@@ -1,0 +1,14 @@
+consumes: {
+  power: 13
+  items: {
+    items: [
+    silicon/2550
+    titanium/2250
+    plastanium/1850
+    ]
+  }
+  liquid: {
+    liquid: cryofluid
+    amount: 3
+  }
+}
