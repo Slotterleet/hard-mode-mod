@@ -1,9 +1,0 @@
-consumes: {
-  power: 1.2
-  items: {
-    items: [
-    silicon/90
-    lead/90
-    ]
-  }
-}

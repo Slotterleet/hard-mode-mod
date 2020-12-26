@@ -1,0 +1,10 @@
+consumes: {
+  power: 6
+  items: {
+    items: [
+    silicon/260
+    titanium/240
+    metaglass/120
+    ]
+  }
+}

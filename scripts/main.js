@@ -1,0 +1,1 @@
+Vars.content.units().each(e => e.health *= 2);
