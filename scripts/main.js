@@ -19,9 +19,9 @@ Vars.content.blocks().each(b => {
   };
   if (b instanceof UnitFactory){
     var plans = b.plans;
-    for(var i = 0; i < plans.length; i++){
-      var stack = plans[i].requirements;
-      for(var j; j < stack.length; j++){
+    for(var i = 0; i < plans.size; i++){
+      var stack = plans.get(i).requirements;
+      for(var j = 0; j < stack.length; j++){
         stack[j].amount *= 3;
       }
     };
