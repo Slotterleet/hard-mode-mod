@@ -17,6 +17,18 @@ public class HardModeMod extends Mod {
             Unit u = e.unit;
             u.health *= 1.6; u.maxHealth *= 1.6;
         });
+        //increase fabricated enemy drones' health
+        Events.on(UnitCreateEvent.class, e -> {
+            Unit u = e.unit;
+            //is it campaign?
+            if (Vars.state.isCampaign() ||
+            //or maybe a custom map? if so, then make sure it isn't PvP
+            (!(Vars.state.isCampaign()) && !(Vars.state.rules.pvp)) &&
+            //and finally, if a unit is indeed an enemy
+            u.team == Vars.state.rules.waveTeam) {
+                u.health *= 1.6; u.maxHealth *= 1.6;
+            }
+        });
 
         Log.info("Hard Mode Activated. Good luck!");
     }
