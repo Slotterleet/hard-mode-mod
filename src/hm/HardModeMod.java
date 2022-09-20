@@ -34,6 +34,15 @@ public class HardModeMod extends Mod {
     }
 
     @Override
+    public void init() {
+        Mods.LoadedMod opmod = Vars.mods.list().find(mod -> mod.name.equals("opmod"));
+
+        if (opmod != null) {
+            Vars.ui.showOkText("@opmod.title", "@opmod.text", () -> Core.app.exit());
+        }
+    }
+
+    @Override
     public void loadContent(){
         Vars.content.blocks().each(b -> {
             if (b instanceof Turret) {
