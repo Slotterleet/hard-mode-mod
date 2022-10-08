@@ -12,6 +12,23 @@ import mindustry.world.blocks.power.*;
 
 public class HardModeMod extends Mod {
     public HardModeMod() {
+        //modify the stats of turrets and power gens
+        Events.on(ClientLoadEvent.class, e ->
+            Vars.content.blocks().each(b -> {
+                if (b instanceof Turret) {
+                    ItemStack[] req = b.requirements;
+                    for (ItemStack i : req) {
+                        i.amount *= 2;
+                    }
+
+                    return;
+                }
+                if (b instanceof PowerGenerator) {
+                    ((PowerGenerator) b).powerProduction *= 2f/3f;
+                }
+            })
+        );
+
         //increase units' health on wave call
         Events.on(UnitSpawnEvent.class, e -> {
             Unit u = e.unit;
@@ -35,28 +52,16 @@ public class HardModeMod extends Mod {
 
     @Override
     public void init() {
-        Mods.LoadedMod opmod = Vars.mods.list().find(mod -> mod.name.equals("opmod"));
+        Mods.LoadedMod xfmod = Vars.mods.list().find(mod -> mod.meta.author.equals("XenoTale"));
 
-        if (opmod != null) {
-            Vars.ui.showOkText("@opmod.title", "@opmod.text", () -> Core.app.exit());
+        if (xfmod != null) {
+            Vars.ui.showOkText("@xenoforce.title", Core.bundle.format("xenoforce.text", xfmod.meta.displayName), () -> Core.app.exit());
         }
     }
 
     @Override
     public void loadContent(){
-        Vars.content.blocks().each(b -> {
-            if (b instanceof Turret) {
-                ItemStack[] req = b.requirements;
-                for (ItemStack i : req) {
-                    i.amount *= 2;
-                }
 
-                return;
-            }
-            if (b instanceof PowerGenerator) {
-                ((PowerGenerator) b).powerProduction *= 2f/3f;
-            }
-        });
     }
 
 }
